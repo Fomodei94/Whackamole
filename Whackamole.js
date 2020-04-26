@@ -1,3 +1,7 @@
+var isMobile=false;
+
+document.addEventListener('touchstart', ()=> {isMobile=true;})
+
 const square = document.querySelectorAll('.square');
 const mole = document.querySelectorAll('.mole');
 const timeLeft = document.querySelector('#time-left');
@@ -45,10 +49,13 @@ function countDown() {
 
 
 function startGame() {
+    document.removeEventListener('touchstart', ()=> {isMobile=true;});
+    if(isMobile) var eventToListen = 'touchstart';
+    else  var eventToListen = 'mouseup';
     currentTime = Number(timeSelector.options[timeSelector.selectedIndex].value);
     diff = Number(diffSelector.options[diffSelector.selectedIndex].value);
     square.forEach(id => {
-        id.addEventListener('mouseup', () => {
+        id.addEventListener(eventToListen, () => {
             if(id.id === hitPosition) {
                 randomSquare();
                 result += 1;
