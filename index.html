@@ -6,18 +6,21 @@
     <meta charset="utf-8">
     <title>Acchiappa la talpa - Fomodei94</title>
     <!-- <author>Federico Omodei</author> -->
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" type="text/css" media="screen and (min-width: 800px), only screen and (min-width: 800px)"/>
+    <link rel="stylesheet" href="mobile.css" type="text/css" charset="utf-8"/>
 </head>
 
 <body>
     <h1>Whack a mole!</h1>
 
-        <h2>Your score: </h2>
-        <h2 id="score">0</h2>
-
-        <h2>Seconds left: </h2>
-        <h2 id="time-left">15</h2>
-
+        <div id="scoreBox">
+            <h2>Your score: <span id="score">0</span></h2>
+        </div>
+        
+        <div id="timeBox">
+            <h2>Seconds left: <span id="time-left">30</span></h2>
+        </div>
+        
         <label for="time">Set timer to:</label>
 
         <select id="time">
@@ -26,16 +29,16 @@
             <option value="45">45 sec</option>
             <option value="60">60 sec</option>
         </select>
-
+        <br/>
         <label for="difficulty">Select difficulty:</label>
 
         <select id="difficulty">
-            <option value="1000">Easy</option>
+            <option value="1000" style="color: green;">Easy</option>
             <option value="750" selected>Normal</option>
-            <option value="520">Hard</option>
-            <option value="400">Brutal</option>
+            <option value="520" style="color: orange;">Hard</option>
+            <option value="400" style="color: red;">Brutal</option>
         </select>
-
+        <br/>
         <button id="start_btn" onclick="startGame()">Play!</button>
 
         <div class="grid">
