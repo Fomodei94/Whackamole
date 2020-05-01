@@ -18,7 +18,8 @@ In this game there is no winner or loser, it's just a challenge with yourself. H
 
 - Score counter: keep track of how many times you hit the mole. Try to beat your highscore!
 
-An example screenshot of the game:
+An example screenshot of the game:  
+
 ![example screenshot whack-a-mole](images/screen.png)
 
 ## Info and contacts
